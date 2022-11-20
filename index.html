@@ -28,6 +28,8 @@
                 --darkCyan: hsl(184, 100%, 22%);
                 --veryDarkCyan: hsl(179, 100%, 13%);
                 --solidWhite: hsl(0, 0%, 100%);
+                --transpWhite: hsla(0, 0%, 100%, 0.75);
+                --vLightGray: hsl(0, 0%, 95%);
                 font-size: 15px;
             }
 
@@ -42,24 +44,34 @@
                 display: flex;
                 flex-direction: column;
                 margin: auto;
-                height: 930px;
+                height: 940px;
                 width: 375px;
                 background-color: var(--solidWhite);
             }
 
             .preview-card {
-                height: 870px;
+                height: 920px;
                 width: 280px;
-                color: var(--solidWhite);
+                color: var(--transpWhite);
                 margin: auto;
             }
 
             .column {
                 display: flex;
                 flex-direction: column;
-                height: 290px;
+                height: 33.33%;
                 padding-left: 30px;
                 padding-right: 30px;
+            }
+
+            .col-icons {
+                height: auto;
+                width: 55px;
+                margin-top: 20px;
+            }
+
+            .col-desc {
+                margin-top: -6px;
             }
 
             #sedan-col {
@@ -89,12 +101,35 @@
                 width: 120px;
                 height: 30px;
                 border-radius: 45px;
-                background-color: var(--solidWhite);
+                background-color: var(--vLightGray);
                 border: none;
+                margin-top: 8px;
+                cursor: pointer;
+            }
+
+            #load-more-sedan {
+                color: var(--brightOrange);
+            }
+
+            #load-more-suv {
+                color: var(--darkCyan);
+            }
+
+            #load-more-luxury {
+                color: var(--veryDarkCyan);
             }
 
             .attribution a {
                 color: hsl(228, 45%, 44%);
+            }
+
+            #load-more-sedan:hover,
+            #load-more-suv:hover,
+            #load-more-luxury:hover {
+                background-color: transparent;
+                border-style: solid;
+                border-color: var(--vLightGray);
+                color: var(--vLightGray);
             }
         </style>
     </head>
@@ -102,6 +137,7 @@
         <main>
             <div class="preview-card">
                 <div class="column" id="sedan-col">
+                    <img src="./images/icon-sedans.svg" class="col-icons" />
                     <h1 class="col-title">SEDANS</h1>
                     <p class="col-desc">
                         Choose a sedan for its affordability and excellent fuel
@@ -117,6 +153,7 @@
                     </button>
                 </div>
                 <div class="column" id="suv-col">
+                    <img src="./images/icon-suvs.svg" class="col-icons" />
                     <h1 class="col-title">SUVs</h1>
                     <p class="col-desc">
                         Take an SUV for its spacious interior, power, and
@@ -132,6 +169,7 @@
                     </button>
                 </div>
                 <div class="column" id="luxury-col">
+                    <img src="./images/icon-luxury.svg" class="col-icons" />
                     <h1 class="col-title">LUXURY</h1>
                     <p class="col-desc">
                         Cruise in the best car brands without the bloated
