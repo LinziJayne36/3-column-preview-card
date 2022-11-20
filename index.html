@@ -38,19 +38,27 @@
                 margin: 0;
                 padding: 0;
                 box-sizing: border-box;
+                height: 100vh;
+                position: relative;
             }
 
             main {
                 display: flex;
                 flex-direction: column;
-                margin: auto;
-                height: 940px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                margin: 0 auto;
+                height: 960px;
                 width: 375px;
                 background-color: var(--solidWhite);
             }
 
             .preview-card {
-                height: 920px;
+                display: flex;
+                flex-direction: column;
+                height: 940px;
                 width: 280px;
                 color: var(--transpWhite);
                 margin: auto;
@@ -130,6 +138,51 @@
                 border-style: solid;
                 border-color: var(--vLightGray);
                 color: var(--vLightGray);
+            }
+
+            @media only screen and (min-width: 1400px) {
+                main {
+                    width: 1420px;
+                    height: 700px;
+                }
+
+                .preview-card {
+                    display: flex;
+                    flex-direction: row;
+                    width: 827px;
+                    height: 400px;
+                }
+
+                .column {
+                    height: 400px;
+                }
+
+                #sedan-col {
+                    border-top-right-radius: 0;
+                    border-bottom-left-radius: 8px;
+                }
+
+                #luxury-col {
+                    border-bottom-left-radius: 0;
+                    border-top-right-radius: 8px;
+                }
+
+                .col-icons {
+                    margin-top: 50px;
+                    margin-bottom: 10px;
+                }
+
+                .col-title {
+                    margin-bottom: -10px;
+                }
+
+                .col-desc {
+                    margin-top: 30px;
+                }
+
+                .load-more-btns {
+                    margin-top: 60px;
+                }
             }
         </style>
     </head>
